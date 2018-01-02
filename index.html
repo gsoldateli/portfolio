@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Guilherme Soldateli - Portfólio</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,400,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- TODO Minify everything into one file. -->
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/about.css">
+	<link rel="stylesheet" href="css/tab.css">
+	<link rel="stylesheet" href="css/carousel.css">
+	<link rel="stylesheet" href="css/graph.css">
+	<link rel="stylesheet" href="css/contact.css">
+	<link rel="stylesheet" href="css/footer.css">	
+	<link rel="stylesheet" href="css/modal.css">	
+</head>
+<body>
+	<div id="canvas">
+	<input type="checkbox" name="menu-open" id="menu-open" class="menu-open" />
+	<nav class="navbar">
+		<div class="container">
+			<div class="row hide-on-small">
+				<div class="col3">
+					<div class="navbar__logo">Guilherme Soldateli</div>
+				</div>
+				<div class="col6">
+					<ul class="menu">
+						<li><a onclick="scrollToElement('#about-section'); return false;" href="#" class="col3 menu__link">
+								About
+						</a></li>
+						<li><a onclick="scrollToElement('#project-section'); return false;" href="#" class="col3 menu__link">
+								Projects
+						</a></li>
+						<li><a onclick="scrollToElement('#skills-section'); return false;" href="#" class="col3 menu__link">
+								Skills
+						</a></li>		
+						<li><a onclick="scrollToElement('#contact-section'); return false;" href="#" class="col3 menu__link">
+								Contact
+						</a></li>										
+					</ul>
+				</div>
+				<div class="col3 search">
+					<input class="search__input" required name="search" id="search" type="text"/>
+					<label class="search__label" for="search">
+						SEARCH:
+					</label>					
+					<span data-modal-open="search" class="fa fa-search search__icon"></span>
+				</div>
+			</div>
+			<div class="row show-on-small">
+					<label for="menu-open" class="navbar__logo navbar__logo--lateral">Guilherme Soldateli
+					</label>
+					<label for="menu-open" class="hamburguer">
+							<span class="hamburguer__item"></span>	
+					</label>		
+				
+			</div>			
+			
+			
+		</div>
+	</nav>
+	<div class="lateral-menu">
+		<ul class="menu menu--sidebar">
+						<li><a onclick="scrollToElement('#about-section',600,closeLateralMenu); return false;" href="#" class="col12 menu__link">
+								About
+						</a></li>
+						<li><a onclick="scrollToElement('#project-section',600,closeLateralMenu); return false;" href="#" class="col12 menu__link">
+								Projects
+						</a></li>
+						<li><a onclick="scrollToElement('#skills-section',600,closeLateralMenu); return false;" href="#" class="col12 menu__link">
+								Skills
+						</a></li>		
+						<li><a onclick="scrollToElement('#contact-section',600,closeLateralMenu); return false;" href="#" class="col12 menu__link">
+								Contact
+						</a></li>										
+			</ul>
+			<div class="disclaimer">
+				<span class="tooltip">Do <b>you</b> know this website was developed by <b>Guilherme Soldateli</b> in 2017?</span>
+				<img src="images/dog.png" class="disclaimer__image" alt="Dog reading newspaper"/>
+			</div>
+	</div>
+	<label for="menu-open" class="overlay">Open Menu</label>
+	<div class="content-holder">
+	<section id="about-section" class="section about">
+		<div class="about__column clearfix">
+			<h1 class="about__title">Hello! My name is Guilherme. <br> And I love building things.</h1>
+		</div>
+		<div class="about__column">
+			<img onclick="scrollToElement('#project-section',700);" src="images/hand-transparent.png" class="img-reponsive about__image" alt="">
+		</div>
+	</section>
+	<section id="project-section" class="section">
+		<div class="container">
+			<h4 class="section__title">Projects</h4>
+			<p class="section__description">Here down are some projects I've worked on during my BOV Academy studies.</p>
+			<div class="section__content">
+				<div class="row">
+					<div class="col2">
+						<ul id="tabs" class="tab">
+							<li class="tab__title tab__title--selected" data-tab-id="tab-calculator">Calculator</li>
+							<li class="tab__title" data-tab-id="tab-accordion">Accordion</li>
+							<li class="tab__title" data-tab-id="tab-forms">Forms</li>
+							<li class="tab__title" data-tab-id="tab-cart">Shopping Cart</li>
+							<li class="tab__title" data-tab-id="tab-image-gallery">Image Gallery</li>
+							<li class="tab__title" data-tab-id="tab-modal">Modal</li>
+							<li class="tab__title" data-tab-id="tab-e-card">E-card</li>
+							<li class="tab__title" data-tab-id="tab-graph">Graphs</li>
+						</ul>
+					</div>
+					<div class="col10 tab__container">
+						<!-- Calculator -->
+						<span class="tab__title tab__title--selected" data-tab-id="tab-calculator">Calculator</span>
+						<div class="tab__content tab__content--selected" data-content-id="tab-calculator">
+							<div class="carousel">
+								<ul class="carousel__items">
+									<li class="carousel__item carousel__item--active">
+										
+										<img data-src="images/projects/calculator/normal.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/calculator/pressed.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/calculator/calculator.gif" alt="">
+									</li>
+
+								</ul>
+							</div>
+							<article class="project">
+								<h4 class="project__title">Calculator</h4>
+								<p  class="project__description">This is a CSS3 + Javascript calculator. Mathematical operations aren't implemented yet.</p>
+								<span class="project__links">
+									<a  href="https://gsoldateli.github.io/calculator/" target="__BLANK" class="btn btn--primary"> <span class="fa fa-globe"></span> Live Example</a> 
+									<a href="https://github.com/gsoldateli/calculator" target="__BLANK" class="btn btn--discrete"> <span class="fa fa-github"></span> Link to github</a>
+								</span>
+							</article>
+
+						</div>
+
+						<!-- End Tab -->	
+						<!-- Accordion -->
+						<span class="tab__title tab__title" data-tab-id="tab-accordion">Accordion</span>
+						<div class="tab__content tab__content" data-content-id="tab-accordion">
+							<div class="carousel">
+								<ul class="carousel__items">
+									<li class="carousel__item carousel__item--active">
+										<img data-src="images/projects/accordion/1.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/accordion/2.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/accordion/accordion.gif" alt="">
+									</li>
+								</ul>
+							</div>
+							<article class="project">
+								<h4 class="project__title">Accordion</h4>
+								<p  class="project__description">This is an accordion made in two versions: CSS only and Javascript enhanced.</p>
+								<span class="project__links">
+									<a  href="https://gsoldateli.github.io/accordion/js/" target="__BLANK" class="btn btn--primary"> <span class="fa fa-globe"></span> Live Example</a> 
+									<a href="https://github.com/gsoldateli/accordion" target="__BLANK" class="btn btn--discrete"> <span class="fa fa-github"></span> Link to github</a>
+								</span>
+							</article>
+
+						</div>
+
+						<!-- End Tab -->		
+						<!-- FORMS -->
+						<span class="tab__title tab__title" data-tab-id="tab-forms">Forms</span>
+						<div class="tab__content tab__content" data-content-id="tab-forms">
+							<div class="carousel">
+								<ul class="carousel__items">
+									<li class="carousel__item carousel__item--active">
+										<img data-src="images/projects/forms/12.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/forms/2.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/forms/3.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/forms/forms.gif" alt="">
+									</li>
+								</ul>
+							</div>
+							<article class="project">
+								<h4 class="project__title">Forms</h4>
+								<p  class="project__description">CSS3 styled forms + Javascript validators. Click into live example and choose among the options to see it live.</p>
+								<span class="project__links">
+									<a  href="https://gsoldateli.github.io/forms/" target="__BLANK" class="btn btn--primary"> <span class="fa fa-globe"></span> Live Example</a> 
+									<a href="https://github.com/gsoldateli/forms" target="__BLANK" class="btn btn--discrete"> <span class="fa fa-github"></span> Link to github</a>
+								</span>
+							</article>
+
+						</div>
+
+						<!-- End Tab -->																				
+						<!-- Shopping cart -->
+						<span class="tab__title tab__title" data-tab-id="tab-cart">Shopping cart</span>
+						<div class="tab__content tab__content" data-content-id="tab-cart">
+							<div class="carousel">
+								<ul class="carousel__items">
+									<li class="carousel__item carousel__item--active">
+										<img data-src="images/projects/cart/1.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/cart/2.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/cart/3.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/cart/cart.gif" alt="">
+									</li>
+								</ul>
+							</div>
+							<article class="project">
+								<h4 class="project__title">Shopping cart</h4>
+								<p  class="project__description">This is an CSS + JS shopping cart with discount functionalities.</p>
+								<span class="project__links">
+									<a  href="https://gsoldateli.github.io/product-listing-page/" target="__BLANK" class="btn btn--primary"> <span class="fa fa-globe"></span> Live Example</a> 
+									<a href="https://github.com/gsoldateli/product-listing-page" target="__BLANK" class="btn btn--discrete"> <span class="fa fa-github"></span> Link to github</a>
+								</span>
+							</article>
+
+						</div>
+
+						<!-- End Tab -->		
+
+						<!--Image gallery -->
+						<span class="tab__title tab__title" data-tab-id="tab-image-gallery">Image gallery</span>
+						<div class="tab__content tab__content" data-content-id="tab-image-gallery">
+							<div class="carousel">
+								<ul class="carousel__items">
+									<li class="carousel__item carousel__item--active">
+										<img data-src="images/projects/gallery/1.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/gallery/2.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/gallery/gallery.gif" alt="">
+									</li>
+								</ul>
+							</div>
+							<article class="project">
+								<h4 class="project__title">Image gallery</h4>
+								<p  class="project__description">This is an CSS + JS image gallery featuring:
+								- Animations on image transitions. <br>
+								- Swipe for mobile devices. </p>
+								<span class="project__links">
+									<a  href="https://gsoldateli.github.io/gallery/" target="__BLANK" class="btn btn--primary"> <span class="fa fa-globe"></span> Live Example</a> 
+									<a href="https://github.com/gsoldateli/gallery" target="__BLANK" class="btn btn--discrete"> <span class="fa fa-github"></span> Link to github</a>
+								</span>
+							</article>
+
+						</div>
+						<!-- End Tab -->		
+						
+						<!--Modal -->
+						<span class="tab__title tab__title" data-tab-id="tab-modal">Modal</span>
+						<div class="tab__content tab__content" data-content-id="tab-modal">
+							<div class="carousel">
+								<ul class="carousel__items">
+									<li class="carousel__item carousel__item--active">
+										<img data-src="images/projects/modal/1.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/modal/2.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/modal/modal.gif" alt="">
+									</li>
+								</ul>
+							</div>
+							<article class="project">
+								<h4 class="project__title">Modal</h4>
+								<p  class="project__description">This is an CSS + JS responsive modal.</p>
+								<span class="project__links">
+									<a  href="https://gsoldateli.github.io/modal/" target="__BLANK" class="btn btn--primary"> <span class="fa fa-globe"></span> Live Example</a> 
+									<a href="https://github.com/gsoldateli/modal" target="__BLANK" class="btn btn--discrete"> <span class="fa fa-github"></span> Link to github</a>
+								</span>
+							</article>
+
+						</div>
+						<!-- End Tab -->	
+						<!--E-card -->
+						<span class="tab__title tab__title" data-tab-id="tab-e-card">E-card</span>
+						<div class="tab__content tab__content" data-content-id="tab-e-card">
+							<div class="carousel">
+								<ul class="carousel__items">
+									<li class="carousel__item carousel__item--active">
+										<img data-src="images/projects/card/1.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/card/2.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/card/card.gif" alt="">
+									</li>
+								</ul>
+							</div>
+							<article class="project">
+								<h4 class="project__title">E-card</h4>
+								<p  class="project__description">This is an online business/personal 3d card made only with CSS.</p>
+								<span class="project__links">
+									<a  href="https://gsoldateli.github.io/e-card/" target="__BLANK" class="btn btn--primary"> <span class="fa fa-globe"></span> Live Example</a> 
+									<a href="https://github.com/gsoldateli/e-card" target="__BLANK" class="btn btn--discrete"> <span class="fa fa-github"></span> Link to github</a>
+								</span>
+							</article>
+
+						</div>
+						<!-- End Tab -->
+						<!--graph -->
+						<span class="tab__title tab__title" data-tab-id="tab-graph">Graph</span>
+						<div class="tab__content tab__content" data-content-id="tab-graph">
+							<div class="carousel">
+								<ul class="carousel__items">
+									<li class="carousel__item carousel__item--active">
+										<img data-src="images/projects/graph/1.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/graph/2.jpg" alt="">
+									</li>
+									<li class="carousel__item">
+										<img data-src="images/projects/graph/3.jpg" alt="">
+									</li>
+								</ul>
+							</div>
+							<article class="project">
+								<h4 class="project__title">Graph</h4>
+								<p  class="project__description">This is an CSS3 graph and bar loading with tooltips on hover.</p>
+								<span class="project__links">
+									<a  href="https://gsoldateli.github.io/graph/" target="__BLANK" class="btn btn--primary"> <span class="fa fa-globe"></span> Live Example</a> 
+									<a href="https://github.com/gsoldateli/graph" target="__BLANK" class="btn btn--discrete"> <span class="fa fa-github"></span> Link to github</a>
+								</span>
+							</article>
+
+						</div>
+						<!-- End Tab -->																											
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<section id="skills-section" class="section">
+		<div class="container">
+			<h4 class="section__title">Skills</h4>
+			<p class="section__description">These are some of my perspectives on how secure I fell on my abilities.</p>
+			<div class="section__content">
+				<div class="row">
+					<div class="col12">
+						<div class="horizontal-bar">
+							<div class="horizontal-bar__item horizontal-bar__item--frontend">75%</div>
+							<div class="horizontal-bar__item horizontal-bar__item--backend">25%</div>
+						</div>
+					</div>
+					<div class="col6">
+						<div class="graph">
+							<h4 class="graph__title">Frontend Development</h4>
+							<ul class="graph-label">
+								<li class="graph-label__item">Expert</li>
+								<li class="graph-label__item">Proficient</li>
+								<li class="graph-label__item">Competent</li>
+								<li class="graph-label__item">Learning</li>
+							</ul>
+							<ul class="graph-bars">
+								<li class="graph-bar__item graph-bar__item--competent">
+									<span class="graph-bar__item-label">Javascript</span> 
+									<span class="tooltip"><b>3 years:</b> Monkey coding.</span>
+								</li>
+								
+								<li class="graph-bar__item graph-bar__item--competent">
+									<span class="graph-bar__item-label">CSS</span>
+									<span class="tooltip"><b>3 Years:</b> Making it work.</span>
+								</li>
+								
+								<li class="graph-bar__item graph-bar__item--proficient">
+									<span class="graph-bar__item-label">jQuery</span>
+									<span class="tooltip"><b>3 Years:</b> Being dependent on it.</span>
+								</li>
+								
+								<li class="graph-bar__item graph-bar__item--expert">
+									<span class="graph-bar__item-label">Bootstrap</span>
+									<span class="tooltip"><b>3 Years:</b> Being dependent on it.</span>
+
+
+								</li>
+								
+								<li class="graph-bar__item graph-bar__item--competent"><span class="graph-bar__item-label">Tooling</span>
+									<span class="tooltip"><b>6 Months:</b> Getting my hands on npm|gulp|grunt.</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col6">
+						<div class="graph">
+							<h4 class="graph__title">Backend Development</h4>
+							<ul class="graph-label">
+								<li class="graph-label__item">Expert</li>
+								<li class="graph-label__item">Proficient</li>
+								<li class="graph-label__item">Competent</li>
+								<li class="graph-label__item">Learning</li>
+							</ul>
+							<ul class="graph-bars">
+								<li class="graph-bar__item graph-bar__item--competent">
+									<span class="graph-bar__item-label">PHP</span> 
+									<span class="tooltip"><b>6 years:</b> Making it happen</span>
+								</li>
+								
+								<li class="graph-bar__item graph-bar__item--competent">
+									<span class="graph-bar__item-label">NodeJS</span>
+									<span class="tooltip"><b>3 months:</b> Experiencing it.</span>
+								</li>
+								
+								<li class="graph-bar__item graph-bar__item--proficient">
+									<span class="graph-bar__item-label">MySql</span>
+									<span class="tooltip"><b>5 Years:</b> Storing stuff here.</span>
+								</li>
+								
+								<li class="graph-bar__item graph-bar__item--proficient">
+									<span class="graph-bar__item-label">PostgreSQL</span>
+									<span class="tooltip"><b>6 Years:</b> Loving it.</span>
+								</li>
+								
+								<li class="graph-bar__item graph-bar__item--competent"><span class="graph-bar__item-label">Apache</span>
+									<span class="tooltip"><b>6 Years:</b> Having fun with virtual hosts + .htaccess</span>
+								</li>
+							</ul>
+						</div>						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col3">&nbsp;</div>
+					<div class="col6 ">
+						<div class="graph">
+							<h4 class="graph__title">Life skills</h4>
+							<ul class="graph-label">
+								<li class="graph-label__item">Expert</li>
+								<li class="graph-label__item">Proficient</li>
+								<li class="graph-label__item">Competent</li>
+								<li class="graph-label__item">Learning</li>
+							</ul>
+							<ul class="graph-bars">
+								<li class="graph-bar__item graph-bar__item--competent">
+									<span class="graph-bar__item-label">Backpacking</span> 
+									<span class="tooltip"><b>1 year:</b> Hanging out around South America.</span>
+								</li>
+								
+								<li class="graph-bar__item">
+									<span class="graph-bar__item-label">Karate</span>
+									<span class="tooltip"><b>1 year:</b> Failing almost every movement, but improving.</span>
+								</li>
+								
+								<li class="graph-bar__item graph-bar__item--competent">
+									<span class="graph-bar__item-label">Public speaking</span>
+									<span class="tooltip">Butterflies in the stomach, but delivering the message.</span>
+								</li>
+								
+								<li class="graph-bar__item">
+									<span class="graph-bar__item-label">Bartending</span>
+									<span class="tooltip"><b>4 Months:</b>Earning tips by making drinks in a bar.</span>
+								</li>
+								
+								<li class="graph-bar__item graph-bar__item--proficient"><span class="graph-bar__item-label">Pet sitting</span>
+									<span class="tooltip"><b>Whole life:</b> around dogs. Woof! Woof!</span>
+								</li>
+							</ul>
+						</div>						
+					</div>
+					</div>
+				</div>
+				
+			</div>
+	</section>	
+
+	<section id="contact-section" class="section section--contact">
+			<div class="container">
+				<h4 class="section__title">Contact</h4>
+				<p class="section__description">You can check my contacts below. If you need something else, click on the card and talk to my beloved assistant.</p>
+				<div class="section__content">
+					<section class="card-container">
+						<input type="checkbox" name="card__toggle" id="card__toggle" class="card__toggle" />
+					  <div class="card">
+					    <label for="card__toggle" class="card__side card__side--front">
+					    	<span class="contact">
+					    		<div class="contact__head">
+					    			<h4 class="contact__name">Guilherme Soares Soldateli</h4>
+					    			<span class="contact__profession">Student</span>
+					    		</div>
+					    		<span class="contact__social">
+						    		<ul class="social">
+						    			<li class="social__item">
+						    				<a href="http://facebook.com/guilherme.gaulois" class="social__link social__link--facebook fa fa-facebook"></a>
+						    			</li>
+						    			<li class="social__item">
+						    				<a href="https://www.instagram.com/guisoldateli/" class="social__link social__link--instagram fa fa-instagram"></a>
+						    			</li>
+						    			<li class="social__item">
+						    				<a href="https://github.com/gsoldateli" class="social__link social__link--github fa fa-github"></a>
+						    			</li>
+											<li class="social__item">
+						    				<a href="https://www.linkedin.com/in/guilherme-soldateli-28281b54" class="social__link social__link--linkedin fa fa-linkedin"></a>
+						    			</li>								    									    									    			
+						    		</ul>	
+					    		</span>
+					    		
+					    		<span class="contact__footer">
+					    			<a class="contact__email" href="mailto://guilherm3soldateli@gmail.com">guilherm3soldateli@gmail.com</a>&nbsp;&nbsp;&nbsp;
+					    			<i class="contact__arrow fa fa-2x fa-arrow-right"></i>
+					    		</span>
+					    	</span>
+					    </label>
+					    <label for="card__toggle" class="card__side card__side--back"></label>
+					  </div>
+					</section>
+				</div>
+			</div>
+	</section>
+
+	<footer id="footer" class="footer">
+		<span class="footer__copy">&copy; Guilherme Soares Soldateli.</span>
+	</footer>
+
+	</div>
+<div data-modal-id="search" class="modal__container">
+			<h4 class="modal__title">Sorry! Search is not available! :( </h4>
+			<div class="modal__body">
+				As soon as possible this amazing search will be running.
+				
+			</div>
+			<div class="modal__footer">
+				<button data-close class="modal__button">Close</button>
+				<span>The window width is <span class="window-width-label"></span>px</span>
+			</div>
+		</div>
+</div>
+	<script src="js/scrollto.js"></script>
+	<script src="js/tab.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/lazy-load.js"></script>
+	<script src="js/global.js"></script>
+</body>
+</html>

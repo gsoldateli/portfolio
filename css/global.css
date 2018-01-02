@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+}
+
+body {
+	padding-top: 0;
+	background-color: red;
+	margin: 0;
+	background: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry.png");
+	overflow-x: hidden;
+}
+
+ul {
+	padding-left: 0;
+	margin: 0;
+
+	list-style: none;
+}
+
+
+/* Lazy loading finnished */
+img {
+	opacity: 1;
+	transition: opacity .3s;
+}
+
+img[data-src] {
+	display: none;
+	position: relative;
+	background-color: red;
+}
+
+.img-loader {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20%;
+    background: radial-gradient(#fff,#fafafa);
+    color: #4686e6;
+}
+.img-loader__icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 3rem;
+	transform: translate(-50%,-50%);	
+}
+
+img,
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+.center-block {
+	margin: auto;
+}
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+a.btn {
+	text-decoration: none;
+}
+.btn {
+	display: inline-block;
+	color: #fff;
+	padding: 1rem 2rem;
+	transition: background-color .3s;
+}
+
+.btn--primary {
+	background-color: #26b938;
+}
+
+.btn--primary:hover {
+	background-color: #1d922b;
+}
+
+.btn--discrete {
+	background-color: #333;
+}
+
+.btn--discrete:hover {
+	background-color: #000;
+}
+
+
+.row {
+	display: block;
+}
+
+.row:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+[class*="col"] {
+  float: left;
+}
+
+.col1 {
+  width: 8.33%;
+}
+
+.col2 {
+  width: 16.66%;
+}
+
+.col3 {
+  width: 25%;
+}
+
+.col4 {
+  width: 33.33%;
+}
+
+.col5 {
+  width: 41.66%;
+}
+
+.col6 {
+  width: 50%;
+}
+
+.col7 {
+  width: 58.33%;
+}
+
+.col8 {
+  width: 66.66%;
+}
+
+.col9 {
+  width: 75%;
+}
+
+.col10 {
+  width: 83.33%;
+}
+
+.col11 {
+  width: 91.66%;
+}
+
+.col12 {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+	/* col-xs mantain column widths in smaller devices */
+	[class*="col"]:not([class*="col-xs"]) {
+	  width: 100%;
+	}
+
+	.hide-on-small {
+		display: none;
+	}
+
+	.show-on-small {
+		display: block;
+	}
+}
+
+@media (min-width: 992px) {
+	.show-on-small {
+		display: none;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.section-padding {
+	padding: 2rem 0;
+}
+
+.section {
+	padding: 2rem 0;
+	text-align: center;
+}
+
+.section:last-of-type  {
+	margin-bottom: 3rem;
+}
+.section__title {
+	font-size: 2rem;
+	color: #3b7eec;
+	margin: 0;
+}
+
+.section__description {
+	margin-bottom: 3rem;
+}
+
+.project {
+	text-align: left;
+}
+
+.project__title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.project__description {
+	margin-bottom: 1rem;
+}
+
+.project__links > a {
+	margin-bottom: .3rem;
+}
+
+/* Lazy loading CSS */
