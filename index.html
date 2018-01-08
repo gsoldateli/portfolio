@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="css/contact.css">
 	<link rel="stylesheet" href="css/footer.css">	
 	<link rel="stylesheet" href="css/modal.css">	
+	<link rel="stylesheet" href="css/gallery.css">	
 </head>
 <body>
 	<div id="canvas">
@@ -245,7 +246,28 @@
 										<img data-src="images/projects/gallery/2.jpg" alt="">
 									</li>
 									<li class="carousel__item">
-										<img data-src="images/projects/gallery/gallery.gif" alt="">
+										<div class="gallery-container">
+		      						<div class="backimage"></div>
+		      						<!-- Thumbnails at the top -->
+								      <nav class="gallery-nav">
+								        <article class="gallery-item">
+								          <img class="gallery-item" src="https://gsoldateli.github.io/gallery/images/carro1.jpg" alt="">
+								        </article>
+								        <article class="gallery-item">
+								          <img class="gallery-item" src="https://gsoldateli.github.io/gallery/images/carro2.jpg" alt="">
+								        </article>
+								        <article class="gallery-item">
+								          <img class="gallery-item" src="https://gsoldateli.github.io/gallery/images/carro3.jpg" alt="">
+								        </article>
+								        <article class="gallery-item">
+								          <img class="gallery-item" src="https://gsoldateli.github.io/gallery/images/carro4.jpg" alt="">
+								        </article>  
+								        <article class="gallery-item">
+								          <img class="gallery-item" src="https://gsoldateli.github.io/gallery/images/carro5.jpg" alt="">
+								        </article>                                
+								        
+								      </nav>
+		    						</div>
 									</li>
 								</ul>
 							</div>
@@ -274,8 +296,8 @@
 									<li class="carousel__item">
 										<img data-src="images/projects/modal/2.jpg" alt="">
 									</li>
-									<li class="carousel__item">
-										<img data-src="images/projects/modal/modal.gif" alt="">
+									<li class="carousel__item modal-live">
+										<button class="btn btn--attention" data-modal-open="example">Click here to open modal!</button>
 									</li>
 								</ul>
 							</div>
@@ -302,7 +324,41 @@
 										<img data-src="images/projects/card/2.jpg" alt="">
 									</li>
 									<li class="carousel__item">
-										<img data-src="images/projects/card/card.gif" alt="">
+										<section class="card-container">
+											<input type="checkbox" name="card__toggle" id="card__toggle" class="card__toggle" />
+										  <div class="card">
+										    <label for="card__toggle" class="card__side card__side--front">
+										    	<span class="contact">
+										    		<div class="contact__head">
+										    			<h4 class="contact__name">Guilherme Soares Soldateli</h4>
+										    			<span class="contact__profession">Student</span>
+										    		</div>
+										    		<span class="contact__social">
+											    		<ul class="social">
+											    			<li class="social__item">
+											    				<a href="http://facebook.com/guilherme.gaulois" class="social__link social__link--facebook fa fa-facebook"></a>
+											    			</li>
+											    			<li class="social__item">
+											    				<a href="https://www.instagram.com/guisoldateli/" class="social__link social__link--instagram fa fa-instagram"></a>
+											    			</li>
+											    			<li class="social__item">
+											    				<a href="https://github.com/gsoldateli" class="social__link social__link--github fa fa-github"></a>
+											    			</li>
+																<li class="social__item">
+											    				<a href="https://www.linkedin.com/in/guilherme-soldateli-28281b54" class="social__link social__link--linkedin fa fa-linkedin"></a>
+											    			</li>								    									    									    			
+											    		</ul>	
+										    		</span>
+										    		
+										    		<span class="contact__footer">
+										    			<a class="contact__email" href="mailto://guilherm3soldateli@gmail.com">guilherm3soldateli@gmail.com</a>&nbsp;&nbsp;&nbsp;
+										    			<i class="contact__arrow fa fa-2x fa-arrow-right"></i>
+										    		</span>
+										    	</span>
+										    </label>
+										    <label for="card__toggle" class="card__side card__side--back"></label>
+										  </div>
+										</section>
 									</li>
 								</ul>
 							</div>
@@ -558,6 +614,16 @@
 	</footer>
 
 	</div>
+
+<div data-modal-id="example" class="modal__container">
+			<h4 class="modal__title">Hi there! This is an example modal.</h4>
+			<div class="modal__body">Click the button below to close this modal.</div>
+			<div class="modal__footer">
+				<button data-close class="modal__button">Close</button>
+			</div>
+		</div>
+</div>
+
 <div data-modal-id="search" class="modal__container">
 			<h4 class="modal__title">Sorry! Search is not available! :( </h4>
 			<div class="modal__body">
@@ -574,6 +640,7 @@
 	<script src="js/tab.js"></script>
 	<script src="js/carousel.js"></script>
 	<script src="js/modal.js"></script>
+	<script src="js/gallery.js"></script>
 	<script src="js/lazy-load.js"></script>
 	<script src="js/global.js"></script>
 </body>

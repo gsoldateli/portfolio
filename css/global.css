@@ -70,6 +70,8 @@ a.btn {
 	text-decoration: none;
 }
 .btn {
+	cursor: pointer;
+	border: none;
 	display: inline-block;
 	color: #fff;
 	padding: 1rem 2rem;
@@ -92,6 +94,21 @@ a.btn {
 	background-color: #000;
 }
 
+.btn--info {
+	background-color: #28508c;
+}
+
+.btn--info:hover {
+	background-color: #203758;
+}
+
+.btn--attention {
+	background-color: #ff7e00;
+}
+
+.btn--attention:hover {
+	background-color: #ef7600;
+}
 
 .row {
 	display: block;
@@ -221,4 +238,18 @@ a.btn {
 	margin-bottom: .3rem;
 }
 
-/* Lazy loading CSS */
+.modal-live {
+    background: #ffd89b;
+    background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
+    background: linear-gradient(to right, #ffd89b, #19547b);
+	min-height: 250px;
+	position: relative;
+}		
+
+.modal-live > .btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	font-size: 1.3rem;
+}
