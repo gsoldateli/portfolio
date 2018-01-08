@@ -70,6 +70,7 @@
 	border:none;
 	color: #fff;
 	padding: .3rem 0;
+	outline: none;
 	width: 100%;
 	border-bottom: 2px solid #98bcf5;
 }
@@ -105,8 +106,9 @@
 	height: 100vh;
 	overflow: hidden;
 	/* Important to handle mobile incompatibilities - https://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms */
-  	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;	
+  	//-webkit-backface-visibility: hidden;
+  	-webkit-transform: translateZ(0px);
+	//backface-visibility: hidden;	
 }
 
 
