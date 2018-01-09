@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="css/accordion.css">
 	<link rel="stylesheet" href="css/modal.css">	
 	<link rel="stylesheet" href="css/gallery.css">	
+	<link rel="stylesheet" href="css/calculator.css">
 </head>
 <body>
 	<div id="canvas">
@@ -127,7 +128,39 @@
 										<img data-src="images/projects/calculator/pressed.jpg" alt="">
 									</li>
 									<li class="carousel__item">
-										<img data-src="images/projects/calculator/calculator.gif" alt="">
+										<div class="calculator-container">
+											<input id="display" type="text" class="calculator-screen" disabled value="123456.000">
+											<div class="buttons-container">
+												<div class="numeric-pad">
+													<span class="button">1</span>
+													<span class="button">2</span>
+													<span class="button">3</span>
+													<span class="button">4</span>
+													<span class="button">5</span>
+													<span class="button">6</span>
+													<span class="button">7</span>
+													<span class="button">8</span>
+													<span class="button">9</span>
+													<span class="button">0</span>					
+													<span class="button">.</span>					
+													<span class="button" onclick="calc.equals();">=</span>					
+												</div>
+												<div class="operation-pad">
+													<span class="button">&divide;</span>					
+													<span class="button">X</span>										
+													<span class="button">-</span>										
+													<span class="button">+</span>										
+												</div>
+												<div class="clear-pad">
+													<div class="button" onclick="calc.clear();">
+														CLEAR
+													</div>
+													<div class="button right" onclick="calc.del();">
+														DEL
+													</div>					
+												</div>
+											</div>
+										</div>
 									</li>
 
 								</ul>
@@ -684,6 +717,7 @@
 	<script src="js/carousel.js"></script>
 	<script src="js/modal.js"></script>
 	<script src="js/accordion.js"></script>
+	<script src="js/calculator.js"></script>
 	<script src="js/gallery.js"></script>
 	<script src="js/lazy-load.js"></script>
 	<script src="js/global.js"></script>

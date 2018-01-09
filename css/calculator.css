@@ -1,0 +1,127 @@
+.right {
+	float: right;
+}
+
+.calculator-container {
+	width: 100%;
+	max-width: 470px;
+	-moz-box-shadow: 0px 10px 40px -4px rgba(0,0,0,1);
+	-webkit-box-shadow: 0px 10px 40px -4px rgba(0,0,0,1);
+	background-color: #fff;
+	background: -moz-linear-gradient(top, rgba(130,130,130,1) 0%, rgba(255,255,255,0.63) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(130,130,130,1) 0%,rgba(255,255,255,0.63) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(130,130,130,1) 0%,rgba(255,255,255,0.63) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-radius: 20px;
+	border: solid 1px #848484;
+	box-shadow: 0px 10px 40px -4px rgba(0,0,0,1);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828282', endColorstr='#a1ffffff',GradientType=0 ); /* IE6-9 */
+	padding: 40px 30px 30px 30px;
+	margin: 0 auto;
+}
+
+.calculator-container:after {
+	clear: both;
+	content: ' ';
+	display: block;
+}
+
+.calculator-screen {
+    background-color: rgb(197, 216, 216);
+    border-radius: 8px;
+    border: 2px solid #656767;
+    box-sizing: border-box;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 16px 12px;
+    text-align: right;
+    width: 100%;
+}
+
+.numeric-pad {
+	float: left;
+	width: 80%;
+}
+
+.operation-pad {
+	float: right;
+	width: 20%;
+}
+.button {
+	-khtml-user-select: none;
+	-moz-box-shadow: 3px 3px 8px -2px rgba(0,0,0,0.75);
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-box-shadow: 3px 3px 8px -2px rgba(0,0,0,0.75);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	/* Disable select on click */
+	background-color: #404757;
+	border-radius: 4px;
+	box-shadow: 3px 3px 8px -2px rgba(0,0,0,0.75);
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 10px;	
+	margin-right: 10px;
+	padding: 20px;
+	text-align: center;
+	user-select: none;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;	
+	      
+}
+
+.button:hover {
+	transform: scale(1.05);
+}
+
+.button:active {
+	background-color: #626c82;
+	box-shadow: 3px 3px 8px -2px rgba(0,0,0,0.45);
+	transform: scale(1);
+}
+
+
+
+.numeric-pad > .button {
+	width: 30%;
+
+}
+
+.operation-pad > .button {
+	width: 100%;
+}
+
+.clear-pad > .button {
+	width: 48.5%;
+	background-color: #0c7384;
+}
+
+.clear-pad > .button:active {
+	background-color: #0c5a67;
+}
+	
+.clear-pad > .button.right {
+	float: right;
+	margin-right: 0;
+}
+
+@media screen and (max-width: 471px) {
+	.button {
+	    margin-right: 5px;
+    	margin-bottom: 5px;
+	}
+
+	.numeric-pad {
+		width: 77%;
+	}
+
+	.operation-pad {
+		width: 23%;
+	}	
+}
