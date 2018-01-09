@@ -262,3 +262,9 @@ a.btn {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+@media(max-width: 600px) {
+	.iframe-live {
+		height: 88vh;
+	}
+}
