@@ -432,7 +432,7 @@
 										    		</span>
 										    	</span>
 										    </label>
-										    <label for="card__toggle" class="card__side card__side--back"></label>
+										    <label for="card__toggle_example" class="card__side card__side--back"></label>
 										  </div>
 										</section>
 									</li>
@@ -685,8 +685,8 @@
 			</div>
 	</section>
 
-	<footer id="footer" class="footer">
-		<span class="footer__copy">&copy; Guilherme Soares Soldateli.</span>
+	<footer data-modal-open="live-example" id="footer" class="footer">
+		<span  class="footer__copy">&copy; Guilherme Soares Soldateli.</span>
 	</footer>
 
 	</div>
@@ -711,6 +711,11 @@
 				<span>The window width is <span class="window-width-label"></span>px</span>
 			</div>
 		</div>
+</div>
+
+<div data-modal-id="live-example" class="modal__container modal__container--fullscreen">
+			<a class="btn btn--primary" data-close ><span class="fa fa-close"></span> Close This Example</a>
+			<iframe class="iframe-live" src="https://gsoldateli.github.io/product-listing-page/" frameborder="0"></iframe>
 </div>
 	<script src="js/scrollto.js"></script>
 	<script src="js/tab.js"></script>
