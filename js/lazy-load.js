@@ -4,8 +4,6 @@
 
 	//To each image
 	for(var x=0; x<$images.length; x++) {
-		console.log($images[x]);
-		
 		var loading = createLoading();
 
 		//Insert loading element before the image
