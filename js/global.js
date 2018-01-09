@@ -14,3 +14,8 @@ window.addEventListener('resize', function(){
 function closeLateralMenu() {
 	document.querySelector('#menu-open').checked = '';
 }
+
+function loadLiveExample(src) {
+	var $iframe = document.querySelector('.iframe-live');
+	$iframe.src = src;
+}
