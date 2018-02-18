@@ -19,6 +19,21 @@ var config = {
 	imgOut: 'dist/images/'
 };
 
+gulp.task('reload', function() {
+  browserSync.reload();
+});
+
+gulp.task('serve', ['css'], function() {
+  browserSync({
+    server: './',
+    open:false
+  });
+
+  gulp.watch(['index.html', config.jsIn], ['reload']);
+  gulp.watch(config.jsIn, ['js']);
+  gulp.watch(config.cssIn, ['css']);
+});
+
 gulp.task('css', function() {
   return gulp.src(config.cssIn)
   	.pipe(sourcemaps.init())
