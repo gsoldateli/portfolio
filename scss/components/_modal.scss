@@ -1,44 +1,74 @@
-.modal__overlay {
-	display: none;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background-color: rgba(0,0,0,.4);
-	z-index: 1000;
-}
+.modal {
+	&__overlay {
+		display: none;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: fixed;
+		background-color: rgba(0,0,0,.4);
+		z-index: 1000;
 
-.modal__overlay--active {
-	display: block;
-}
+		&--active {
+			display: block;
+			.modal__container {
+				animation: modalContainerFadeIn .3s ease-in 1 forwards;
+			}
+		}
+	}
 
-.modal__container {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-    background: radial-gradient(#4686e6, #5473a2);
-	color: #fff;
-    box-shadow: 1px 1px 116px #333;
-	display: none;
-	width: 100%;
-	max-width: 600px;
-	margin: 0 auto;
-	opacity: 0;
-	transform: translate(-50%,-50%) scale(0.7);
-}
+	&__container {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+	    background: radial-gradient(#4686e6, #5473a2);
+		color: #fff;
+	    box-shadow: 1px 1px 116px #333;
+		display: none;
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		opacity: 0;
+		transform: translate(-50%,-50%) scale(0.7);
 
-.modal__container--fullscreen {
-	width: 100%;
-	max-width: 100%;
-	height: 100%;
-	position: fixed;
-	z-index: 100;
+		&--fullscreen {
+			width: 100%;
+			max-width: 100%;
+			height: 100%;
+			position: fixed;
+			z-index: 100;
+		}
+	}
 
-}
+	&__title,
+	&__body,
+	&__footer {
+		padding: 1rem 2rem;
+	}
 
-.modal__overlay--active > .modal__container {
-	animation: modalContainerFadeIn .3s ease-in 1 forwards;
+	&__title {
+		margin: 0;
+		font-size: 1.8rem;
+		padding-top: 2rem;
+	}
+
+	&__footer {
+		padding-bottom: 2rem;
+	}
+
+	&__button {
+		cursor: pointer;
+	    font-size: 1.3rem;
+	    background-color: #28508c;
+	    color: #fff;
+	    border: none;
+	    padding: .5rem 2rem;
+	    transition: background-color .3s;
+
+	    &:hover {
+			background-color: #203758;
+		}
+	}
 }
 
 @keyframes modalContainerFadeIn {
@@ -48,31 +78,4 @@
   }
 }
 
-.modal__title,
-.modal__body,
-.modal__footer {
-	padding: 1rem 2rem;
-}
 
-.modal__title {
-	margin: 0;
-	font-size: 1.8rem;
-	padding-top: 2rem;
-}
-
-.modal__footer {
-	padding-bottom: 2rem;
-}
-
-.modal__button {
-	cursor: pointer;
-    font-size: 1.3rem;
-    background-color: #28508c;
-    color: #fff;
-    border: none;
-    padding: .5rem 2rem;
-    transition: background-color .3s;
-}
-.modal__button:hover {
-	background-color: #203758;
-}
