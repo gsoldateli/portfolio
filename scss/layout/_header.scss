@@ -101,28 +101,8 @@
     box-shadow: 3px 0px 13px #333;
     transition: transform .3s;
     z-index: -1;
-
 }
 
-
-
-
-
-.menu-open:checked ~ .navbar .hamburguer__item {
-	transform: rotate(-180deg);
-}
-
-.menu-open:checked ~ .navbar .hamburguer__item:before {
-	transform: translate3d(12px,4px,0) rotate(45deg) scaleX(.4);
-}
-
-.menu-open:checked ~ .navbar .hamburguer__item:after {
-	transform: translate3d(12px,-4px,0) rotate(-45deg) scaleX(.4);
-}
-
-.menu-open {
-	display: none;
-}
 
 .content-holder {
 	width: 100%;
@@ -137,23 +117,18 @@
 	width: 100%;
 	transform: translateY(100%);
 	transition: transform .4s;
-}
 
-.menu-open:checked ~ .lateral-menu .disclaimer {
-	transform: translateY(0);
-}
+	&__image {
+		max-width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
 
-
-.disclaimer > .tooltip {
-	display: block;
-	opacity: 1;
-	top: -90px;
-}
-
-.disclaimer__image {
-	max-width: 80%;
-	display: block;
-	margin: 0 auto;
+	.tooltip {
+		display: block;
+		opacity: 1;
+		top: -90px;
+	}
 }
 
 .overlay {
@@ -169,32 +144,43 @@
 	transition: opacity .6s, transform .3s;
 }
 
-.menu-open:checked ~ .navbar .navbar__logo--lateral {
-	transform: translate3d(0, 0, 0);
-}
+.menu-open {
+	display: none;
+	
+	//Animate lateral menu and is inner components.
+	&:checked ~ {
 
-.menu-open:checked ~ .navbar .hamburguer {
-	left: 260px;
-}
+		.lateral-menu .disclaimer {
+			transform: translateY(0);
+		}
 
-.menu-open:checked ~ .lateral-menu {
-	display: block;
-	transform: translate3d(0, 0, 0);
-	z-index: 2;
-	opacity: 1;
-}
+		.navbar .navbar__logo--lateral {
+			transform: translate3d(0, 0, 0);
+		}
+
+		.navbar .hamburguer {
+			left: 260px;
+		}
+
+		.lateral-menu {
+			display: block;
+			transform: translate3d(0, 0, 0);
+			z-index: 2;
+			opacity: 1;
+		}
+
+		.overlay {
+			opacity: 1;
+			z-index: 1;
+			left: 250px;
+		}
 
 
-.menu-open:checked ~ .overlay {
-	opacity: 1;
-	z-index: 1;
-	left: 250px;
-}
+		.content-holder {
+		    transform: translate3d(250px, 0, 0);
+		    overflow-y: hidden;
 
-
-.menu-open:checked ~ .content-holder {
-    transform: translate3d(250px, 0, 0);
-    overflow-y: hidden;
-
+		}
+	}
 }
 
