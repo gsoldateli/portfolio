@@ -8,31 +8,30 @@
 	height: 50px;
 	transition: left .3s;
 	cursor: pointer;
-}
 
-.hamburguer__item,
-.hamburguer__item:before,
-.hamburguer__item:after {
-	content: " ";
-	display: block;
-	width: 40px;
-	height: 4px;
-	border-radius: 4px;
-	background-color: #fff;	
-	position: absolute;
-	left: 0;	
-	transition: transform .3s;
-}
+	&__item,
+	&__item:before,
+	&__item:after {
+		content: " ";
+		display: block;
+		width: 40px;
+		height: 4px;
+		border-radius: 4px;
+		background-color: #fff;	
+		position: absolute;
+		left: 0;	
+		transition: transform .3s;
+	}
 
-.hamburguer__item {
-	top: 23px;
-}
+	&__item {
+		top: 23px;
+	}
 
+	&__item:before {
+		top: -10px;
+	}
 
-.hamburguer__item:before {
-	top: -10px;
-}
-
-.hamburguer__item:after {
-	bottom: -10px;
+	&__item:after {
+		bottom: -10px;
+	}
 }
