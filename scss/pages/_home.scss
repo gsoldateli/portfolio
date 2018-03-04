@@ -93,3 +93,20 @@
 		max-width: 90%;
 	}
 }
+
+/* Modal live example */
+.modal-live {
+    background: #ffd89b;
+    background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
+    background: linear-gradient(to right, #ffd89b, #19547b);
+	min-height: 250px;
+	position: relative;
+
+	> .btn {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%,-50%,0);
+		font-size: 1.3rem;
+	}
+}
