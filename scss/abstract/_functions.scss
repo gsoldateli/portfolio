@@ -1,0 +1,5 @@
+@function calculateGridColumn($gridUnit) {
+	$unitarySize: (100% / 12);
+
+	@return $unitarySize * $gridUnit;
+}
