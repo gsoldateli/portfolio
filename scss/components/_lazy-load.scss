@@ -1,0 +1,28 @@
+/* Lazy loading finnished */
+img {
+	opacity: 1;
+	transition: opacity .3s;
+}
+
+img[data-src] {
+	display: none;
+	position: relative;
+	background-color: red;
+}
+
+.img-loader {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20%;
+    background: radial-gradient(#fff,#fafafa);
+    color: #4686e6;
+}
+.img-loader__icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 3rem;
+	transform: translate(-50%,-50%);	
+}

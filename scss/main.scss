@@ -1,0 +1,27 @@
+@import "abstract/placeholder";
+ 
+@import "base/reset";
+@import "base/base";
+
+@import "components/lazy-load";
+@import "components/section";
+@import "components/search-input";
+@import "components/accordion";
+@import "components/calculator";
+@import "components/carousel";
+@import "components/contact";
+@import "components/gallery";
+@import "components/graph";
+@import "components/modal";
+@import "components/live-preview";
+@import "components/project";
+@import "components/tab";
+@import "components/hamburguer";
+
+
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/home";

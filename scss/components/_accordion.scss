@@ -1,0 +1,82 @@
+.accordion {
+	border-radius: 10px;
+	border: 1px solid #333;
+	padding: 12px;
+}
+
+.accordion ul {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	text-align: left;
+}
+
+.accordion li {
+	border: 1px solid #333;
+	margin-bottom: 3px;
+}
+
+.accordion li:last-child {
+	margin-bottom: 0;
+}
+
+.menu-input {
+	display: none;
+}
+
+.menu-label {
+	background-color: #D95B44;
+	color: #532120;	
+	font-size: 1.4rem;
+	font-weight: bold;
+	display: block;
+	padding: 6px;
+	cursor: pointer;
+	margin: 0;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;	
+}
+
+.menu-label:hover {
+	background-color: #ce5943;
+}
+
+.menu-label.active {
+	background-color: #BF2942;
+	color: #fff;
+}
+
+.menu-label.active:hover {
+	background-color: #a22035;
+}
+
+
+
+.menu-body {
+	overflow: hidden;
+	display: block;
+	height: 0;
+	padding: 0 12px;
+	border-top: 1px solid #333;
+    transition:all 0.3s ease-out;
+}
+.menu-label.active ~ .menu-body {
+	padding: 12px;
+}
+
+.menu-body-title {
+	color: #51383C;
+	margin: 0 0 8px 0;
+}
+
+.menu-body-category {
+	margin: 0 0 8px 0;
+	display: block;
+}
+
+.menu-option {
+	margin: 0;
+	line-height: 1.5em;
+}

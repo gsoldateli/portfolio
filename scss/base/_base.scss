@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+}
+
+body {
+	padding-top: 0;
+	background-color: red;
+	margin: 0;
+	background: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry.png");
+	overflow-x: hidden;
+}
+
+ul {
+	padding-left: 0;
+	margin: 0;
+
+	list-style: none;
+}
+
+
+img,
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+.center-block {
+	margin: auto;
+}
+
+.row {
+	display: block;
+}
+
+.row:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+

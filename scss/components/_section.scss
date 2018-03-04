@@ -1,0 +1,22 @@
+.section-padding {
+	padding: 2rem 0;
+}
+
+.section {
+	padding: 2rem 0;
+	text-align: center;
+}
+
+.section:last-of-type  {
+	margin-bottom: 3rem;
+}
+
+.section__title {
+	font-size: 2rem;
+	color: #3b7eec;
+	margin: 0;
+}
+
+.section__description {
+	margin-bottom: 3rem;
+}

@@ -1,0 +1,38 @@
+/* Thanks to https://jonsuh.com/hamburgers/ for the insight! */
+.hamburguer {
+	left: 1rem;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	transition: left .3s;
+	cursor: pointer;
+}
+
+.hamburguer__item,
+.hamburguer__item:before,
+.hamburguer__item:after {
+	content: " ";
+	display: block;
+	width: 40px;
+	height: 4px;
+	border-radius: 4px;
+	background-color: #fff;	
+	position: absolute;
+	left: 0;	
+	transition: transform .3s;
+}
+
+.hamburguer__item {
+	top: 23px;
+}
+
+
+.hamburguer__item:before {
+	top: -10px;
+}
+
+.hamburguer__item:after {
+	bottom: -10px;
+}
