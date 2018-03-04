@@ -1,0 +1,29 @@
+.horizontal-bar {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    box-shadow: 0 0 13px rgba(51, 51, 51, 0.7686274509803922);
+
+    &__item {
+        height: 100%;
+        display: inline-block;
+        float: left;
+        line-height: 2.4rem;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+
+        &--frontend {
+            width: 75%;
+            background: linear-gradient(#e996bc,#ffa6cf,#e996bc);
+        }
+
+        &--backend {
+            background: linear-gradient(#4dbbf0,#8edaff,#4dbbf0);
+            width: 25%;
+        }
+
+    }
+}
