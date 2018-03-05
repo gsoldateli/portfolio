@@ -17,12 +17,14 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828282', endColorstr='#a1ffffff',GradientType=0 ); /* IE6-9 */
 	padding: 40px 30px 30px 30px;
 	margin: 0 auto;
-}
 
-.calculator-container:after {
-	clear: both;
-	content: ' ';
-	display: block;
+	&:after {
+		clear: both;
+		content: ' ';
+		display: block;
+	}
+
+
 }
 
 .calculator-screen {
@@ -40,12 +42,29 @@
 .numeric-pad {
 	float: left;
 	width: 80%;
+
+	@media screen and (max-width: 471px) {
+		width: 77%;
+	}
+
+	> .button {
+		width: 30%;
+	}
 }
 
 .operation-pad {
 	float: right;
 	width: 20%;
+
+	@media screen and (max-width: 471px) {
+		width: 23%;
+	}
+
+	> .button {
+		width: 100%;
+	}
 }
+
 .button {
 	-khtml-user-select: none;
 	-moz-box-shadow: 3px 3px 8px -2px rgba(0,0,0,0.75);
@@ -73,43 +92,42 @@
     -o-transition: all 0.1s ease-out;
     -webkit-transition: all 0.1s ease-out;
     transition: all 0.1s ease-out;	
+
+    &:hover {
+		transform: scale(1.05);
+	}
+
+	&:active {
+		background-color: #626c82;
+		box-shadow: 3px 3px 8px -2px rgba(0,0,0,0.45);
+		transform: scale(1);
+	}
+
+	@media screen and (max-width: 471px) {
+		margin-right: 5px;
+	    margin-bottom: 5px;
+	}	
 	      
 }
 
-.button:hover {
-	transform: scale(1.05);
+
+
+.clear-pad {
+	> .button {
+		width: 48.5%;
+		background-color: #0c7384;
+
+		&:active {
+			background-color: #0c5a67;
+		}
+	}
+
+	> .button.right {
+		float: right;
+		margin-right: 0;
+	}
 }
 
-.button:active {
-	background-color: #626c82;
-	box-shadow: 3px 3px 8px -2px rgba(0,0,0,0.45);
-	transform: scale(1);
-}
-
-
-
-.numeric-pad > .button {
-	width: 30%;
-
-}
-
-.operation-pad > .button {
-	width: 100%;
-}
-
-.clear-pad > .button {
-	width: 48.5%;
-	background-color: #0c7384;
-}
-
-.clear-pad > .button:active {
-	background-color: #0c5a67;
-}
-	
-.clear-pad > .button.right {
-	float: right;
-	margin-right: 0;
-}
 
 @media screen and (max-width: 471px) {
 	.button {
