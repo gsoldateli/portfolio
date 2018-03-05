@@ -1,83 +1,81 @@
 .carousel {
 	position: relative;
-}
-.carousel__items {
-    max-width: 80%;
-    margin: 0 auto;
-}
 
-.carousel__arrow {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-100%);
-    font-size: 2rem;
-    color: #3b7eec;
-    padding: 1rem;
-    cursor: pointer;
-    transition: transform .2s;
-}
-
-.carousel__arrow:hover {
-	transform: translateY(-100%) scale(1.3);
-}
-
-.carousel__arrow--left {
-	left: 0;
-}
-
-.carousel__arrow--right {
-	right: 0;
-}
-
-.carousel__item {
-	display: none;
-}
-
-.carousel__item > img {
-    border: 5px solid #fff;
-    box-shadow: 0 0 12px #333;
-}
-
-@media(min-width: 600px) {
-	.carousel__item > img {
-	    min-height: 300px;
+	&__items {
+	    max-width: 80%;
+	    margin: 0 auto;
 	}
-}
 
-.carousel__item--active {
-	display: block;
-}
+	&__arrow {
+	    position: absolute;
+	    text-align: center;
+	    top: 50%;
+	    transform: translateY(-100%);
+	    font-size: 2rem;
+	    color: #3b7eec;
+	    padding: 1rem;
+	    cursor: pointer;
+	    transition: transform .2s;
 
-.carousel__nav {
-    margin-top: 2rem;
-}
+	    &:hover {
+			transform: translateY(-100%) scale(1.3);
+		}
 
-.carousel__nav-item {
-	display: inline-block;
-	background-color: #ccc;
-	border-radius: 100%;
-	width: 1.3rem;
-	margin-right: 8px;
-	height: 1.3rem;
-	transition: background-color .3s, transform .3s;
-}
+		&--left {
+			left: 0;
+		}
 
-.carousel__nav > .carousel__nav-item:last-child {
-	margin-right: 0;
-}
+		&--right {
+			right: 0;
+		}
+	}
 
-.carousel__nav-item--active {
-	background-color: #3b7eec;
-}
-.carousel__nav-item:hover {
-	cursor: pointer;
-	transform: scale(1.1);
-	background-color: #666;
-	transition: transform .1s;
-}
+	&__item {
+		display: none;
+		> img {
+		    border: 5px solid #fff;
+		    box-shadow: 0 0 12px #333;
 
+		    @media(min-width: 600px) {
+			    min-height: 300px;
+			}
+		}
 
-.carousel__nav-item:active {
-	transform: scale(1);
+		&--active {
+			display: block;
+		}
+	}
+
+	&__nav {
+	    margin-top: 2rem;
+
+	    &-item {
+			display: inline-block;
+			background-color: #ccc;
+			border-radius: 100%;
+			width: 1.3rem;
+			margin-right: 8px;
+			height: 1.3rem;
+			transition: background-color .3s, transform .3s;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--active {
+				background-color: #3b7eec;
+			}
+
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.1);
+				background-color: #666;
+				transition: transform .1s;
+			}
+
+			&:active {
+				transform: scale(1);
+			}
+		}
+	}
 }
