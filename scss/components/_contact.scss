@@ -13,45 +13,45 @@
 	transform-style: preserve-3d;
 	transition: transform .8s;
 	width: 100%;
-}
 
-.card__toggle {
-	display: none;
-}
+	&__toggle {
+		display: none;
 
-.card__toggle:checked ~ .card {
-	transform: rotateY( 180deg );
-}
+		&:checked ~ .card {
+			transform: rotateY( 180deg );
+		}
+	}
 
-.card__side {
-	backface-visibility: hidden;
-	box-shadow: 1px 1px 20px #333;
-	cursor: pointer;
-	display: block;
-	height: 100%;
-	margin: 0;
-	position: absolute;
-	transition: transform .3s;
-	width: 100%;
-}
+	&__side {
+		backface-visibility: hidden;
+		box-shadow: 1px 1px 20px #333;
+		cursor: pointer;
+		display: block;
+		height: 100%;
+		margin: 0;
+		position: absolute;
+		transition: transform .3s;
+		width: 100%;
 
-.card__side--front {
-    background: radial-gradient(#4686e6, #5473a2);
-}
+		&--front {
+		    background: radial-gradient(#4686e6, #5473a2);
 
-.card__side--front:hover {
-	transform: rotateY(10deg);
-}
+		    &:hover {
+				transform: rotateY(10deg);
+			}
+		}
 
-.card__side--back {
-	background-image: url('../images/bg-card.jpg');
-	background-size: cover;
-	background-position: top center;
-	transform: rotateY( 180deg ) ;
-}
-
-.card__side--back:hover {
-	transform: rotateY( 170deg );
+		&--back {
+			background-image: url('../images/bg-card.jpg');
+			background-size: cover;
+			background-position: top center;
+			transform: rotateY( 180deg ) ;
+			
+			&:hover {
+				transform: rotateY( 170deg );
+			}
+		}
+	}
 }
 
 .contact {
@@ -62,56 +62,52 @@
 	height: 100%;
 	display: block;
 	box-sizing: border-box;
-}
 
-.contact__head {
-	position: absolute;
-	left: 0;
-	top: 0;
-	padding: 1rem;
-}
+	&__head {
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 1rem;
+	}
 
-.contact__name {
-	font-size: 1.5rem;
-	font-weight: bold;
-	margin: 0 0 .3rem 0;
-}
+	&__name {
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin: 0 0 .3rem 0;
+	}
 
-.contact__profession {
-	
-}
+	&__footer {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding: 1rem;
+		background-color: rgba(0,0,0,.5);
+		width: 100%;
+		text-align: center;
+	  	-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;		
+	}
 
-.contact__footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	padding: 1rem;
-	background-color: rgba(0,0,0,.5);
-	width: 100%;
-	text-align: center;
-  	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;		
-}
+	&__social {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		left: 0;
+		padding: 1rem;
+		transform: translate3d(0,-50%,0);
+	  	-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;	
+	}
 
-.contact__social {
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	left: 0;
-	padding: 1rem;
-	transform: translate3d(0,-50%,0);
-  	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;	
-}
+	&__email {
+		color: #fff;
+		text-decoration: none;
+	}
 
-.contact__email {
-	color: #fff;
-	text-decoration: none;
-}
-
-.contact__arrow {
-	font-size: 20px;
-	animation: arrow-attention .4s infinite alternate;
+	&__arrow {
+		font-size: 20px;
+		animation: arrow-attention .4s infinite alternate;
+	}
 }
 
 @keyframes arrow-attention {
@@ -126,42 +122,36 @@
 
 .social {
 	text-align: center;
-}
-.social__item {
-	display: inline-block;
-}
 
-.social__link {
-	background-color: #ccc;
-	width: 60px;
-	height: 60px;
-	line-height: 60px;
-	font-size: 26px;
-	border-radius: 100%;
-	text-align: center;
-	text-decoration: none;
-	box-shadow: 0px 0px 10px #000;
-	color: #fff;
-	margin-right: 1rem;
-	transition: transform .5s;
-}
+	&__item {
+		display: inline-block;
+	}
 
-.social__link:hover {
-	transform: rotateZ(360deg);
-}
+	&__link {
+		background-color: #ccc;
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		font-size: 26px;
+		border-radius: 100%;
+		text-align: center;
+		text-decoration: none;
+		box-shadow: 0px 0px 10px #000;
+		color: #fff;
+		margin-right: 1rem;
+		transition: transform .5s;
 
-.social__link--facebook {
-	background-color: #3B5998;
-}
+		&:hover {
+			transform: rotateZ(360deg);
+		}
 
-.social__link--instagram {
-	background-color: #BA166F;
-}
-
-.social__link--github {
-	background-color: #333;
-}
-
-.social__link--linkedin {
-	background-color: #0077B5;
+		@each $socialMedia, $color in (facebook,#3B5998),
+										(instagram, #BA166F ),
+										(github, #333 ),
+										(linkedin,#0077B5) {
+			&--#{$socialMedia} {
+				background-color: $color;
+			}							
+		}
+	}
 }
