@@ -38,6 +38,11 @@
 		text-align: center;
 		padding: 1rem 0;
 		transition: color .3s, background-color .3s;
+
+		&:hover {
+			color: #fff;
+		    background-color: rgba(0, 0, 0, 0.5686274509803921);    			
+		}
     }
 }
 
@@ -47,10 +52,9 @@
 			border-bottom: 1px solid #c3c3c3;
     		color: #4686e6;
 
-    		&:hover {
+			&:hover {
 				color: #fff;
-			    background-color: rgba(0, 0, 0, 0.5686274509803921);    			
-    		}
+			}
 		}
 	}
 }

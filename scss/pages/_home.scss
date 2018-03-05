@@ -17,6 +17,10 @@
 	float: left;
 	height: 100%;
 
+	&--clearfix {
+		@extend %clearfix;
+	}
+
 }
 
 .about__title {
