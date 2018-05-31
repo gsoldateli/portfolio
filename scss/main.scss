@@ -1,31 +1,29 @@
-@import "abstract/placeholder";
-@import "abstract/functions";
- 
-@import "base/reset";
-@import "base/base";
-@import "base/helpers";
+@import 'abstract/placeholder';
+@import 'abstract/functions';
 
-@import "components/lazy-load";
-@import "components/section";
-@import "components/buttons";
-@import "components/search-input";
-@import "components/accordion";
-@import "components/calculator";
-@import "components/carousel";
-@import "components/contact";
-@import "components/gallery";
-@import "components/horizontal-bar";
-@import "components/graph";
-@import "components/modal";
-@import "components/live-preview";
-@import "components/project";
-@import "components/tab";
-@import "components/hamburguer";
+@import 'base/reset';
+@import 'base/base';
+@import 'base/helpers';
 
+@import 'components/lazy-load';
+@import 'components/section';
+@import 'components/buttons';
+@import 'components/search-input';
+@import 'components/accordion';
+@import 'components/calculator';
+@import 'components/carousel';
+@import 'components/contact';
+@import 'components/gallery';
+@import 'components/horizontal-bar';
+@import 'components/graph';
+@import 'components/modal';
+@import 'components/live-preview';
+@import 'components/project';
+@import 'components/tab';
+@import 'components/hamburguer';
 
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
 
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
-
-@import "pages/home";
+@import 'pages/home';

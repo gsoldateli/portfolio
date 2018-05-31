@@ -5,18 +5,31 @@
 .section {
 	padding: 2rem 0;
 	text-align: center;
-}
 
-.section:last-of-type  {
-	margin-bottom: 3rem;
-}
+	&__title {
+		font-size: 2rem;
+		color: #3b7eec;
+		margin: 0;
+	}
 
-.section__title {
-	font-size: 2rem;
-	color: #3b7eec;
-	margin: 0;
-}
+	&__description {
+		margin-bottom: 3rem;
+	}
 
-.section__description {
-	margin-bottom: 3rem;
+	&--trivia {
+		background: radial-gradient(#4686e6, #5473a2);
+		padding-botom: 4rem;
+
+		.section__title {
+			color: #fff;
+			font-size: 3rem;
+			line-height: 3.5rem;
+			margin-bottom: 2rem;
+		}
+
+		.section__description {
+			color: #fff;
+			font-size: 1.8rem;
+		}
+	}
 }
