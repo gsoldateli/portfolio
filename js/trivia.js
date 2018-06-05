@@ -11,11 +11,9 @@
 	}
 
 	function _requestTrivia(number) {
-		var xhr = new XMLHttpRequest();
+		let xhr = new XMLHttpRequest();
 
-		xhr.onload = function() {
-			_render(number, this.response);
-		};
+		xhr.onload = () => _render(number, xhr.response);
 
 		xhr.open('GET', 'http://numbersapi.com/' + number);
 		xhr.setRequestHeader('Accept', 'application/json');

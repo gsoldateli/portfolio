@@ -1,43 +1,35 @@
-
-(function(window){
-
-	var tabs = document.querySelectorAll('.tab__title');
+(function(window) {
+	let tabs = Array.from(document.querySelectorAll('.tab__title'));
 
 	function toggleTab(tabId) {
-		var previousTabs = document.querySelectorAll('.tab__title--selected');
-		var previousContent = document.querySelector('.tab__content--selected');
-		var activeContent = document.querySelector("[data-content-id='"+tabId+"']");
-		var activeTabs = document.querySelectorAll("[data-tab-id='"+tabId+"']");
-		
+		let previousTabs = Array.from(document.querySelectorAll('.tab__title--selected'));
+		let activeTabs = Array.from(document.querySelectorAll("[data-tab-id='" + tabId + "']"));
+		let previousContent = document.querySelector('.tab__content--selected');
+		let activeContent = document.querySelector("[data-content-id='" + tabId + "']");
+
 		//Deactivate previous selected tabs
-		for(var i=0; i < previousTabs.length; i++) {
-			previousTabs[i].classList.remove('tab__title--selected');
-		}
+		previousTabs.forEach(tab => tab.classList.remove('tab__title--selected'));
 
 		//Activate the current content
-		for(var i=0; i < activeTabs.length; i++) {
-			activeTabs[i].classList.add('tab__title--selected');
-		}
+		activeTabs.forEach(tab => tab.classList.add('tab__title--selected'));
 
-		//Toggle between previous content and 
+		//Toggle between previous content and
 		previousContent.classList.remove('tab__content--selected');
 		activeContent.classList.add('tab__content--selected');
 	}
 
-	for(var i =0 ; i < tabs.length; i++) {
-
-		tabs[i].addEventListener('click',function(){
+	tabs.forEach(tab => {
+		tab.addEventListener('click', function() {
 			toggleTab(this.dataset.tabId);
 		});
-	}
+	});
 
-	var tabsContainer = document.querySelectorAll('.tab__container > .tab__title');
+	let tabsContainer = Array.from(document.querySelectorAll('.tab__container > .tab__title'));
 
-	for(var i = 0; i < tabsContainer.length; i++) {
+	tabsContainer.forEach(tabContainer => {
 		//On mobile devices, position the window in front of the active tab.
-		tabsContainer[i].addEventListener('click',function(){
-			window.scrollToElement(this,1000);
+		tabContainer.addEventListener('click', function() {
+			window.scrollToElement(this, 1000);
 		});
-	}
-
+	});
 })(window);
