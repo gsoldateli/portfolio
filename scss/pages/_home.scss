@@ -13,37 +13,37 @@
 
 .about__column {
 	position: relative;
-	width: 50%;	
+	width: 50%;
 	float: left;
 	height: 100%;
 
 	&--clearfix {
 		@extend %clearfix;
 	}
-
 }
 
 .about__title {
-    top: 0;
-    left: 50%;
-    position: absolute;
-    margin: 0;
-    font-size: 3rem;
-    z-index: 1;
+	top: 0;
+	left: 50%;
+	position: absolute;
+	margin: 0;
+	font-size: 3rem;
+	z-index: 1;
+}
+
+.about__last-visit {
+	font-size: 1.2rem;
 }
 
 .about__image {
-    position: absolute;
-    right: 25%;
-    bottom: 0;
-    transition: transform .3s;
+	position: absolute;
+	right: 25%;
+	bottom: 0;
+	transition: transform 0.3s;
 	cursor: pointer;
 }
 
-
-
-@media(min-width: 1024px) {
-
+@media (min-width: 1024px) {
 	.about__title {
 		top: 50%;
 		transform: translateY(-50%);
@@ -51,17 +51,15 @@
 
 	.about__image:hover {
 		transform: scale(1.05);
-	}	
-
+	}
 }
-@media(max-width: 1200px) {
-	.about__image { 
-	    right: 0;
-     }     
+@media (max-width: 1200px) {
+	.about__image {
+		right: 0;
+	}
 }
 
-
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
 	.about__column {
 		width: 100%;
 	}
@@ -71,38 +69,36 @@
 	}
 
 	.about__title {
-	    text-align: center;
-	    width: 100%;
-	    left: 0;
-	    top: 72px;
-	    font-size: 2.5rem;
-
+		text-align: center;
+		width: 100%;
+		left: 0;
+		top: 72px;
+		font-size: 2.5rem;
 	}
 
-	.about__image { 
-	    right: 50%;
-    	max-width: 50%;
-    	transform: translateX(67%);
-     }     
+	.about__image {
+		right: 50%;
+		max-width: 50%;
+		transform: translateX(67%);
+	}
 }
 
-
-@media(max-width: 600px) {
+@media (max-width: 600px) {
 	.about__title {
 		font-size: 2rem;
 		margin-top: 2rem;
 	}
 
-	.about__image { 
+	.about__image {
 		max-width: 90%;
 	}
 }
 
 /* Modal live example */
 .modal-live {
-    background: #ffd89b;
-    background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
-    background: linear-gradient(to right, #ffd89b, #19547b);
+	background: #ffd89b;
+	background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
+	background: linear-gradient(to right, #ffd89b, #19547b);
 	min-height: 250px;
 	position: relative;
 
@@ -110,7 +106,7 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate3d(-50%,-50%,0);
+		transform: translate3d(-50%, -50%, 0);
 		font-size: 1.3rem;
 	}
 }
